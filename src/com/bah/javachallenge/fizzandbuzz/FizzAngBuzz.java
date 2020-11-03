@@ -30,7 +30,7 @@ public class FizzAngBuzz {
     }
 
     // Solution 2
-    // This guy a bit shorter, but not so good readable
+    //
     //
     private static void fizzAndBuzz2(int maxNum) {
         // Let's start counting from 1 instead of 0 ;)

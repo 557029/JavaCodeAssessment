@@ -3,13 +3,16 @@ package com.bah.javachallenge.primenumber;
 public class PrimeNumberImpl1 implements PrimeNumber {
     @Override
     public boolean isPrime(int number) {
-        // This number is not divisible more than half, we can consider to use only half number selection
-        //
-        for(int i = 2; i <= number/2 ; ++i) {
+        // 0, 1 and 2 are known prime numbers
+        if (number <= 2) {
+            return true;
+        }
+        // Divide the number by half for check if it is divisible
+        for(int i = 2; i <= number/2; i++) {
             if(number % i == 0) {
-                return true;
+                return false;
             }
         }
-        return false;
+        return true;
     }
 }

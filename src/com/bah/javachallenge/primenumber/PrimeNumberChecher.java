@@ -6,7 +6,9 @@ public class PrimeNumberChecher {
         final PrimeNumber impl2 = new PrimeNumberImpl2();
 
         for(int i = 1; i <= 100; i++) {
-            System.out.println(i + " - " + impl1.isPrime(i) + ", " + impl2.isPrime(i));
+            //System.out.println(i + " - " + impl1.isPrime(i) + ", " + impl1.isPrime(i));
+            //System.out.println(i + " - " + impl1.isPrime(i) + ", " + impl2.isPrime(i));
+            System.out.println(String.format("isPrime(%d) = %s",i, impl1.isPrime(i)));
         }
     }
 }

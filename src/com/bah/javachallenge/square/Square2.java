@@ -12,11 +12,13 @@ public class Square2 implements Shape {
     @Override
     public int perimeter() {
         // Let's do it in crazy way
+        //
         return this.sideSize + this.sideSize + this.sideSize + this.sideSize;
     }
 
     @Override
     public int area() {
+        // Just because it is square.
         return (int) Math.pow(this.sideSize, 2);
     }
 }

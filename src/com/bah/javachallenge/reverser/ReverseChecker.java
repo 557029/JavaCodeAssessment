@@ -4,7 +4,7 @@ public class ReverseChecker {
 
     public static void main(String[] args) {
         final Reverser reverser1 = new Reverse1Impl();
-        final Reverser reverser2 = new Reverse2Impl();
+        //final Reverser reverser2 = new Reverse2Impl();
 
         final String[][] arrForTest = new String[][]{
                 {"abc","cba"},
@@ -14,9 +14,12 @@ public class ReverseChecker {
         };
         for(int i = 0; i < arrForTest.length; i++) {
             String[] strKeys = arrForTest[i];
-            System.out.println(reverser1.isReverse(strKeys[0], strKeys[1])
-                    + " "
-                    + reverser2.isReverse(strKeys[0], strKeys[1]));
+            String bRes = reverser1.isReverse(strKeys[0], strKeys[1]) ? "true": "false";
+            System.out.println(String.format("isReverse(\"%s\",\"%s\") = %s", strKeys[0], strKeys[1], bRes));
+
+//            System.out.println(reverser1.isReverse(strKeys[0], strKeys[1])
+//                    + " "
+//                    + reverser2.isReverse(strKeys[0], strKeys[1]));
         }
     }
 }
